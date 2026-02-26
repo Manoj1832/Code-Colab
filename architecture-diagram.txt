@@ -1,0 +1,31 @@
+Code Collab Architecture
+========================
+
++-------------------+       +-------------------+
+|   React Frontend  | <---> |  Node.js Backend  |
+|   (Port 80/Nginx) |       |    (Port 5000)    |
++-------------------+       +-------------------+
+         |                           |
+         |     Socket.io              |
+         +---------------------------+
+                   |
+         +-------------------+
+         |   Socket.io       |
+         |   Real-time       |
+         |   Communication   |
+         +-------------------+
+
+Components:
+-----------
+1. Frontend: React 18 with textarea editor
+2. Backend: Express + Socket.io server
+3. Docker: Multi-stage builds for production
+4. Jenkins: 4-stage CI/CD pipeline
+
+Flow:
+-----
+1. User opens frontend in browser
+2. Socket.io connects to backend
+3. User joins default room
+4. Code changes broadcast to all room members
+5. Real-time sync across all connected clients

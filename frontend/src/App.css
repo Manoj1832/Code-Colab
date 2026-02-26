@@ -1,0 +1,63 @@
+.App {
+  min-height: 100vh;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App-header {
+  background-color: #252526;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #569cd6;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.status.connected {
+  background-color: #4ec9b0;
+  color: #1e1e1e;
+}
+
+.status.disconnected {
+  background-color: #f44747;
+  color: white;
+}
+
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.code-editor {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 70vh;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  border: 1px solid #3c3c3c;
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  outline: none;
+}
+
+.code-editor:focus {
+  border-color: #569cd6;
+}
