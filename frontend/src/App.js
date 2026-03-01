@@ -3,8 +3,8 @@ import { io } from 'socket.io-client';
 import './App.css';
 
 const socket = io();
-const space = ""
-  function App() {
+
+function App(){
     const [code, setCode] = useState('');
     const [roomId] = useState('default-room');
     const [connected, setConnected] = useState(false);
