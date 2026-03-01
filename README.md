@@ -145,8 +145,5 @@ docker build -t code-collab/code-collab:latest .
 # Push to DockerHub
 docker login
 docker push code-collab/code-collab:latest
-```
 
-## License
 
-MIT
