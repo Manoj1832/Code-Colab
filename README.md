@@ -2,6 +2,8 @@
 
 A real-time collaborative code editor built with React, Node.js, Express, and Socket.io.
 
+> 📐 For a detailed technical breakdown, see [ARCHITECTURE.md](./ARCHITECTURE.md).
+
 ## Architecture
 
 ```
@@ -31,9 +33,11 @@ code-collab/
 
 4. **As a user**, I want to know my connection status so that I am aware if I am connected or disconnected.
 
-5. **As a user**, I want multiple users to edit the same room so that team collaboration is possible.
+5. **As a user**, I want to invite others to my session by copying a shareable link so that collaboration is easy to start.
 
-6. **As a developer**, I want a Dockerized application so that it can be easily deployed to any environment.
+6. **As a user**, I want multiple users to edit the same room so that team collaboration is possible.
+
+7. **As a developer**, I want a Dockerized application so that it can be easily deployed to any environment.
 
 ## Technology Stack
 
@@ -63,7 +67,7 @@ docker-compose up --build
 
 The application will be available at:
 - Frontend: http://localhost
-- Backend API: http://localhost:000
+- Backend API: http://localhost:5000
 
 ### Manual Setup
 
