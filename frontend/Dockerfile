@@ -20,10 +20,6 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY docker-entrypoint.sh /docker-entrypoint.d/01-configure.sh
-
-RUN chmod +x /docker-entrypoint.d/01-configure.sh
-
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["/bin/bash", "-c", "if [ -n \"$BACKEND_HOST\" ]; then sed -i \"s|__BACKEND_HOST__|$BACKEND_HOST|g\" /etc/nginx/conf.d/default.conf; fi && nginx -g 'daemon off;'"]
