@@ -21,7 +21,7 @@ COPY backend/ ./backend/
 # Copy the frontend build artifacts from the builder stage
 COPY --from=builder /app/frontend/build ./frontend/build
 
-EXPOSE 80
-ENV PORT=80
+EXPOSE 3000
+ENV PORT=3000
 
 CMD ["node", "backend/server.js"]
