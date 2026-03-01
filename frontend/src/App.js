@@ -45,13 +45,27 @@ function App() {
     socket.emit('code-change', { roomId, code: newCode });
   };
 
+  const handleInvite = () => {
+    const inviteLink = window.location.href;
+    navigator.clipboard.writeText(inviteLink).then(() => {
+      alert('Invite link copied to clipboard!');
+    }).catch(err => {
+      console.error('Failed to copy text: ', err);
+    });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Code Collab</h1>
-        <span className={`status ${connected ? 'connected' : 'disconnected'}`}>
-          {connected ? 'Connected' : 'Disconnected'}
-        </span>
+        <div className="header-actions">
+          <button className="invite-button" onClick={handleInvite}>
+            Invite
+          </button>
+          <span className={`status ${connected ? 'connected' : 'disconnected'}`}>
+            {connected ? 'Connected' : 'Disconnected'}
+          </span>
+        </div>
       </header>
       <main>
         <textarea
