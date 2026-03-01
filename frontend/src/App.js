@@ -3,7 +3,7 @@ import { io } from 'socket.io-client';
 import './App.css';
 
 const socket = io();
-const space =
+const space = ""
   function App() {
     const [code, setCode] = useState('');
     const [roomId] = useState('default-room');
