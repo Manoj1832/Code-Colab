@@ -1,0 +1,12 @@
+node_modules
+frontend/node_modules
+backend/node_modules
+build
+frontend/build
+.git
+.gitignore
+README.md
+Jenkinsfile
+docker-compose.yml
+architecture-diagram.txt
+CODE_COLLAB_DEVOPS_MASTER_PLAN.md
