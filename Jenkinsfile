@@ -19,10 +19,10 @@ pipeline {
             steps {
                 echo 'Building application...'
                 dir('backend') {
-                    bat 'npm ci'
+                    bat 'npm install'
                 }
                 dir('frontend') {
-                    bat 'npm ci'
+                    bat 'npm install'
                     bat 'npm run build'
                 }
             }
